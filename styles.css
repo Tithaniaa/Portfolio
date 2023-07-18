@@ -1,0 +1,812 @@
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  animation: animatedBackground 10s linear infinite;
+}
+
+.moving-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url(lol.jpg);
+  background-size: cover;
+  animation: movingBackground 20s linear infinite;
+}
+
+@keyframes movingBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+/* Header styles */
+header {
+  background-color: cadetblue;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.uppercase-first {
+  text-transform: capitalize;
+}
+
+/* Landing Page/Home styles */
+#landing {
+  background-size: cover;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: aliceblue;
+}
+
+#landing h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#landing p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+/* About Me styles */
+
+.profile-img {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+#about {
+  padding: 80px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 300px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Resume/CV styles */
+#resume {
+  padding: 80px;
+  background-color: #e8e8e8;
+  text-align: center;
+}
+
+/* Skills styles */
+#skills {
+  padding: 70px;
+  text-align: center;
+  background-color: #f2f2f2f2;
+  margin-top: 7%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#skills p {
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#skills ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#skills li {
+  width: 150px;
+  height: 150px;
+  background-color: #333;
+  color: #fff;
+  font-size: 24px;
+  line-height: 150px;
+  margin: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+#skills li:hover {
+  transform: rotate(360deg);
+}
+
+/* Contact Me styles */
+#contact {
+  padding: 80px;
+  background-color: #e8e8e8;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  width: 150px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* Additional styles */
+.tablinks.active {
+  background-color: #380303;
+}
+
+/* Tab styles */
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 60;
+  height: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e8e8e8;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 15px;
+  margin: auto;
+}
+
+.tab.active {
+  background-color: transparent;
+}
+
+.tab:hover {
+  background-color: #AAA;
+}
+
+.tab-content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition-duration: 0.3s;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+h3 {
+  color: orange;
+  margin: 10px 0;
+  text-transform: lowercase;
+  font-size: 1.25em;
+}
+
+.resume {
+  width: 960px;
+  background: wheat;
+  color:rgb(3, 0, 0);
+  margin: 20px auto;
+  box-shadow: 10px 10px black;
+  position: relative;
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.resume .base,
+.resume .func {
+  box-sizing: border-box;
+  float: left;
+}
+
+.resume .base > div,
+.resume .func > div {
+  padding-bottom: 10px;
+}
+
+.resume .base > div:last-of-type,
+.resume .func > div:last-of-type {
+  padding-bottom: 0;
+}
+
+.resume .base {
+  width: 30%;
+  padding: 30px 15px;
+  background: rgb(54, 3, 3);
+  color: white;
+}
+
+.resume .base .profile {
+  background: rgb(54, 3, 3);
+  padding: 30px 15px 40px 15px;
+  margin: -30px -15px 45px -15px;
+  position: relative;
+  z-index: 2;
+}
+
+.resume .base .profile::after {
+  content: "";
+  position: absolute;
+  background: dark blue;
+  width: 100%;
+  height: 30px;
+  bottom: -15px;
+  left: 0;
+  transform: skewY(-5deg);
+  z-index: -1;
+}
+
+.resume .base .profile .photo img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.resume .base .profile .photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume .base .profile .fa-rocket {
+  font-size: 100px;
+  text-align: center;
+  margin: auto;
+  color: darker-blue;
+}
+
+.resume .base .profile .info {
+  text-align: center;
+  color: white;
+}
+
+.resume .base .profile .info .name {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 1.75em;
+  text-transform: lowercase;
+  color: darkest-blue;
+}
+
+.resume .base .profile .info .job {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 1.5em;
+  text-transform: lowercase;
+  color: darker-blue;
+}
+
+.resume .base .contact div {
+  line-height: 24px;
+}
+
+.resume .base .contact div a:hover {
+  color: yellow;
+}
+
+.resume .base .contact div a:hover span::after {
+  width: 100%;
+}
+
+.resume .base .contact div:hover i {
+  color: yellow;
+}
+
+.resume .base .contact div i {
+  color: orange;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 15px;
+  transition-duration: 0.3s;
+}
+
+.resume .base .contact div span {
+  position: relative;
+}
+
+.resume .base .contact div span::after {
+  content: "";
+  position: absolute;
+  background: yellow;
+  height: 1px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  transition-duration: 0.3s;
+}
+
+.resume .base .follow .box {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.resume .base .follow .box a {
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+.resume .base .follow .box a:hover i {
+  background: yellow;
+  border-radius: 5px;
+  transform: rotate(45deg) scale(0.8);
+}
+
+.resume .base .follow .box a:hover i::before {
+  transform: rotate(-45deg) scale(1.5);
+}
+
+.resume .base .follow .box i {
+  display: inline-block;
+  font-size: 30px;
+  background: orange;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  line-height: 60px;
+  color: darker-blue;
+  margin: 0 10px 10px 10px;
+  transition-duration: 0.3s;
+}
+
+.resume .base .follow .box i::before {
+  transition-duration: 0.3s;
+}
+
+.resume .base .follow .box i.fa::before {
+  display: block;
+}
+
+.resume .func {
+  width: 100%;
+  padding: 30px;
+}
+
+.resume .func:hover > div {
+  transition-duration: 0.5s;
+}
+
+.resume .func:hover > div:hover h3 i {
+  transform: scale(1.25);
+}
+
+.resume .func:hover > div:not(:hover) {
+  opacity: 0.5;
+}
+
+.resume .func h3 {
+  transition-duration: 0.3s;
+  margin-top: 0;
+}
+
+.resume .func h3 i {
+  color: darker-blue;
+  background: orange;
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
+  line-height: 42px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 8px;
+  transition-duration: 0.3s;
+}
+
+.resume .func .work,
+.resume .func .edu {
+  float: left;
+}
+
+.resume .func .work small,
+.resume .func .edu small {
+  display: block;
+  opacity: 0.7;
+}
+
+.resume .func .work ul li,
+.resume .func .edu ul li {
+  position: relative;
+  margin-left: 15px;
+  padding-left: 25px;
+  padding-bottom: 15px;
+}
+
+.resume .func .work ul li:hover::before,
+.resume .func .edu ul li:hover::before {
+  animation: circle 1.2s infinite;
+}
+
+.resume .func .work ul li:hover span,
+.resume .func .edu ul li:hover span {
+  color: yellow;
+}
+
+@keyframes circle {
+  from {
+    box-shadow: 0 0 0 0px yellow;
+  }
+  to {
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
+  }
+}
+
+.resume .func .work ul li:first-of-type::before,
+.resume .func .edu ul li:first-of-type::before {
+  width: 10px;
+  height: 10px;
+  left: 1px;
+}
+
+.resume .func .work ul li:last-of-type,
+.resume .func .edu ul li:last-of-type {
+  padding-bottom: 3px;
+}
+
+.resume .func .work ul li:last-of-type::after,
+.resume .func .edu ul li:last-of-type::after {
+  border-radius: 1.5px;
+}
+
+.resume .func .work ul li::before,
+.resume .func .work ul li::after,
+.resume .func .edu ul li::before,
+.resume .func .edu ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.resume .func .work ul li::before,
+.resume .func .edu ul li::before {
+  width: 7px;
+  height: 7px;
+  border: 3px solid white;
+  background: orange;
+  border-radius: 50%;
+  left: 3px;
+  z-index: 1;
+}
+
+.resume .func .work ul li::after,
+.resume .func .edu ul li::after {
+  width: 3px;
+  height: 100%;
+  background: white;
+  left: 5px;
+  top: 0;
+}
+
+.resume .func .work ul li span,
+.resume .func .edu ul li span {
+  transition-duration: 0.3s;
+}
+
+.resume .func .work {
+  width: 48%;
+  background: dark blue;
+  padding: 15px;
+  margin: 0 4% 15px 0;
+}
+
+.resume .func .edu {
+  width: 48%;
+  background: dark blue;
+  padding: 15px;
+}
+
+.resume .func .skills-prog {
+  clear: both;
+  background: dark blue;
+  padding: 15px;
+}
+
+.resume .func .skills-prog ul {
+  margin-left: 15px;
+}
+
+.resume .func .skills-prog ul li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  transition-duration: 0.3s;
+}
+
+.resume .func .skills-prog ul li:hover {
+  color: yellow;
+}
+
+.resume .func .skills-prog ul li:hover .skills-bar .bar {
+  background: yellow;
+  box-shadow: 0 0 0 1px yellow;
+}
+
+.resume .func .skills-prog ul li span {
+  display: block;
+  width: 120px;
+}
+
+.resume .func .skills-prog ul li .skills-bar {
+  background: white;
+  height: 2px;
+  width: calc(100% - 120px);
+  position: relative;
+  border-radius: 2px;
+}
+
+.resume .func .skills-prog ul li .skills-bar .bar {
+  position: absolute;
+  top: -1px;
+  height: 4px;
+  background: orange;
+  box-shadow: 0 0 0 rgb(197, 85, 41);
+  border-radius: 5px;
+}
+
+.resume .func .skills-soft {
+  clear: both;
+  background: dark blue;
+  padding: 15px;
+  margin: 15px 0 0;
+}
+
+.resume .func .skills-soft ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.resume .func .skills-soft ul li {
+  position: relative;
+}
+
+.resume .func .skills-soft ul li:hover svg .cbar {
+  stroke: yellow;
+  stroke-width: 4px;
+}
+
+.resume .func .skills-soft ul li:hover span,
+.resume .func .skills-soft ul li:hover small {
+  transform: scale(1.2);
+}
+
+.resume .func .skills-soft ul li svg {
+  width: 95%;
+  fill: transparent;
+  transform: rotate(-90deg);
+}
+
+.resume .func .skills-soft ul li svg circle {
+  stroke-width: 1px;
+  stroke: white;
+}
+
+.resume .func .skills-soft ul li svg .cbar {
+  stroke-width: 3px;
+  stroke: orange;
+  stroke-linecap: round;
+}
+
+.resume .func .skills-soft ul li span,
+.resume .func .skills-soft ul li small {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 52%;
+  transition-duration: 0.3s;
+}
+
+.resume .func .skills-soft ul li span {
+  top: 40%;
+}
+
+.resume .func .interests {
+  background: dark rgba(255, 30, 0, 0.452);
+  margin: 15px 0 0;
+  padding: 15px;
+}
+
+.resume .func .interests-items {
+  box-sizing: border-box;
+  padding: 0 0 15px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume .func .interests-items div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.resume .func .interests-items div:hover i {
+  transform: scale(1.2);
+}
+
+.resume .func .interests-items div:hover span {
+  color: yellow;
+  transition-duration: 0.3s;
+}
+
+.resume .func .interests-items div i {
+  font-size: 45px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: orange;
+  transition-duration: 0.3s;
+}
+
+.resume .func .interests-items div span {
+  display: block;
+}
+
+.column {
+  float: left;
+  width: 31%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  justify-content: space-around;
+}
+
+.gallery-image{
+  width: 200px;
+  height: 200px;
+}
+.row {
+  box-sizing: border-box;
+  margin: inherit;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
